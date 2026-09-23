@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0ea5a5">
+<title>沖繩 5日4夜｜情侶自駕深度美拍旅行</title>
+<style>
+:root{
+  --ink:#17324d; --muted:#66788a; --sea:#0ea5a5; --sky:#eaf8fb;
+  --sand:#fff8ed; --pink:#fff0f4; --card:#fff; --line:#dce8ee;
+  --shadow:0 12px 32px rgba(23,50,77,.10); --radius:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:#f5fafb;line-height:1.75}
+a{color:inherit}
+.hero{
+  min-height:430px;display:flex;align-items:flex-end;padding:42px 20px;
+  background:
+    linear-gradient(180deg,rgba(4,42,65,.05),rgba(4,42,65,.78)),
+    url("https://prcdn.freetls.fastly.net/release_image/81463/28/81463-28-7b5f3382f8d3d45ab817f1828ec6b94b-3900x3120.jpg?auto=webp&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950")
+    center/cover;
+  color:#fff;
+}
+.hero-inner{max-width:1080px;width:100%;margin:auto}
+.kicker{display:inline-block;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);padding:7px 13px;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:14px}
+h1{font-size:clamp(34px,7vw,64px);line-height:1.1;margin:16px 0 10px}
+.hero p{font-size:18px;margin:5px 0;max-width:760px}
+.container{max-width:1080px;margin:auto;padding:24px 16px 70px}
+.notice{
+  margin-top:-34px;background:#fff;border-radius:24px;box-shadow:var(--shadow);padding:20px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;position:relative
+}
+.notice .item{background:var(--sky);padding:14px;border-radius:16px}
+.notice b{display:block;font-size:13px;color:var(--sea)}
+.notice span{font-size:17px;font-weight:700}
+.toc{display:flex;gap:9px;overflow:auto;padding:18px 2px;position:sticky;top:0;z-index:20;background:rgba(245,250,251,.92);backdrop-filter:blur(10px)}
+.toc a{text-decoration:none;white-space:nowrap;background:#fff;border:1px solid var(--line);padding:8px 13px;border-radius:999px;font-size:13px}
+.section{margin-top:34px}
+.section-title{display:flex;align-items:end;gap:12px;margin-bottom:15px}
+.day{font-size:14px;background:var(--sea);color:#fff;border-radius:999px;padding:5px 10px}
+h2{margin:0;font-size:28px}
+.subtitle{color:var(--muted);margin:3px 0 18px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 7px 22px rgba(23,50,77,.06)}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card-body{padding:17px}
+.card h3{margin:0 0 8px;font-size:20px}
+.meta{display:grid;gap:7px;font-size:14px}
+.meta div{display:flex;gap:8px}
+.meta strong{min-width:82px;color:#31536d}
+.note{margin-top:12px;padding:11px 13px;border-radius:13px;background:var(--sand);font-size:14px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}
+.links a{font-size:13px;text-decoration:none;border:1px solid #b9dfe4;color:#087c82;background:#f1fcfd;padding:6px 10px;border-radius:999px}
+.timeline{display:grid;gap:10px}
+.stop{
+  background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px;
+  display:grid;grid-template-columns:82px 1fr;gap:14px;box-shadow:0 5px 18px rgba(23,50,77,.04)
+}
+.time{font-weight:800;color:var(--sea);font-size:16px}
+.stop h3{margin:0;font-size:17px}
+.stop p{margin:3px 0;color:var(--muted);font-size:14px}
+.stop .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
+.chip{background:#f1f7fa;border-radius:999px;padding:3px 8px;font-size:12px;color:#476273}
+.maplink{font-size:12px;color:#087c82;text-decoration:none}
+.route{background:linear-gradient(135deg,#e9fbfb,#fff7ed);padding:20px;border-radius:20px;border:1px solid var(--line);margin:18px 0}
+.route h3{margin:0 0 8px}
+.route p{margin:0;color:#526978}
+.callout{padding:20px;border-radius:20px;background:linear-gradient(135deg,#fff0f4,#edfafd);border:1px solid #f2dce3;margin:20px 0}
+.callout h3{margin:0 0 7px}
+.hotel{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.hotel .box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}
+.hotel h3{margin:0 0 6px}
+.footer{margin-top:35px;padding:25px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+.small{font-size:12px;color:var(--muted)}
+@media(max-width:760px){
+  .hero{min-height:390px;padding:28px 16px}
+  .notice{grid-template-columns:1fr;margin-top:-22px}
+  .grid,.hotel{grid-template-columns:1fr}
+  .card img{height:210px}
+  .stop{grid-template-columns:65px 1fr;gap:8px}
+  h2{font-size:24px}
+}
+@media print{
+  .toc{display:none}.hero{min-height:300px}.card,.stop{box-shadow:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="kicker">2026/10/26（一）～10/30（五）｜5日4夜</span>
+    <h1>沖繩・情侶自駕深度美拍之旅</h1>
+    <p>海景 × 北部自然 × 古宇利島 × JUNGLIA備選 × 浪漫夕陽</p>
+    <p>這一版刻意取消南部長距離拉車，把時間留給那霸以北，節奏以「不趕路、好拍照、好吃、晚上早點休息」為主。</p>
+  </div>
+</header>
+
+<main class="container">
+  <section class="notice">
+    <div class="item"><b>去程｜NU302</b><span>桃園 → 那霸｜10/26</span><br><small>官方冬季班表：10:15 → 12:50</small></div>
+    <div class="item"><b>回程｜NU301</b><span>那霸 → 桃園｜10/30</span><br><small>官方冬季班表：08:35 → 09:15</small></div>
+    <div class="item"><b>住宿節奏</b><span>那霸 → 本部連住 → 那霸</span><br><small>減少搬行李，保留休息時間</small></div>
+  </section>
+
+  <nav class="toc" aria-label="日期導覽">
+    <a href="#d1">10/26 Day 1</a><a href="#d2">10/27 Day 2</a><a href="#d3">10/28 Day 3</a><a href="#d4">10/29 Day 4</a><a href="#d5">10/30 Day 5</a>
+  </nav>
+
+  <section class="route">
+    <h3>🗺️ 全程路線</h3>
+    <p>那霸 → 瀨長島 → 波上宮 → 恩納 → 萬座毛 → 古宇利島 → 備瀨／本部 → Day 3 北部深度 → 今歸仁／名護 → 恩納 → 美國村 → 那霸 → 那霸機場</p>
+  </section>
+
+  <section id="d1" class="section">
+    <div class="section-title"><span class="day">DAY 1</span><h2>10/26（一）｜城市＋海景</h2></div>
+    <p class="subtitle">中午抵達那霸｜瀨長島 → 波上宮 → 國際通</p>
+    <div class="timeline">
+      <div class="stop"><div class="time">12:50</div><div><h3>抵達那霸機場</h3><p>日本越洋航空 NU302。入境、領行李。</p><div class="chips"><span class="chip">停留約60～90分鐘</span><span class="chip">租車手續另計</span></div></div></div>
+      <div class="stop"><div class="time">14:00</div><div><h3>租車公司取車</h3><p>完成文件、車況確認、導航／ETC設定後出發。</p><div class="chips"><span class="chip">車程：至瀨長島約15～20分鐘</span><span class="chip">建議不要壓縮取車時間</span></div></div></div>
+    </div>
+    <div class="grid" style="margin-top:16px">
+      <article class="card">
+        <img src="https://www.companion-enkai.com/blog/wp-content/uploads/2018/04/umikajiterrace.jpg" alt="瀨長島 Umikaji Terrace">
+        <div class="card-body">
+          <h3>🌊 瀨長島 Umikaji Terrace</h3>
+          <div class="meta">
+            <div><strong>時間</strong>14:30～16:00</div>
+            <div><strong>地址</strong>〒901-0233 沖縄県豊見城市瀬長174-6</div>
+            <div><strong>停留</strong>約1.5小時</div>
+            <div><strong>車程</strong>那霸機場／租車處至此約15～20分鐘</div>
+            <div><strong>備註</strong>午餐、白色階梯、海景、飛機起降；可依當天狀況延長咖啡時間。</div>
+          </div>
+          <div class="links">
+            <a href="https://www.google.com/maps/search/?api=1&query=瀬長島ウミカジテラス" target="_blank">Google Maps</a>
+            <a href="https://www.umikajiterrace.com/" target="_blank">官方網站</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://www.newamazing.com.tw/eweb_newamazing/japan/okinawa/naminoue-gu.asp" alt="波上宮">
+        <div class="card-body">
+          <h3>⛩️ 波上宮＋波之上海灘</h3>
+          <div class="meta">
+            <div><strong>時間</strong>16:30～17:30</div>
+            <div><strong>地址</strong>〒900-0031 沖縄県那覇市若狭1-25-11</div>
+            <div><strong>停留</strong>約1小時</div>
+            <div><strong>車程</strong>瀨長島至波上宮約20～30分鐘</div>
+            <div><strong>備註</strong>神社、懸崖海景、聯絡橋；拍完可直接回飯店休息。</div>
+          </div>
+          <div class="links">
+            <a href="https://www.google.com/maps/search/?api=1&query=波上宮沖繩" target="_blank">Google Maps</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://image.co-trip.jp/common/userpost/images_l/202210/507347_03225538_sub_0_460014629.jpg" alt="國際通夜景">
+        <div class="card-body">
+          <h3>🌃 國際通晚餐＋散步</h3>
+          <div class="meta">
+            <div><strong>時間</strong>19:00～21:00</div>
+            <div><strong>地址</strong>沖縄県那覇市牧志周邊</div>
+            <div><strong>停留</strong>約2小時</div>
+            <div><strong>車程</strong>飯店至國際通依住宿位置約5～15分鐘</div>
+            <div><strong>備註</strong>第一晚不要排太滿；吃阿古豬、沖繩麵或燒肉，逛街後早點休息。</div>
+          </div>
+          <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=国際通り那覇" target="_blank">Google Maps</a></div>
+        </div>
+      </article>
+    </div>
+    <div class="callout"><h3>💡 Day 1 小提醒</h3><div>第一天最重要的是「順利抵達」。若入境或租車延誤，優先刪減波之上海灘停留，不要犧牲晚餐與休息時間。</div></div>
+  </section>
+
+  <section id="d2" class="section">
+    <div class="section-title"><span class="day">DAY 2</span><h2>10/27（二）｜沖繩北部海景</h2></div>
+    <p class="subtitle">BANTA CAFE → 萬座毛 → 古宇利島 → 備瀨</p>
+    <div class="timeline">
+      <div class="stop"><div class="time">08:00</div><div><h3>早餐、退房</h3><p>從那霸出發一路向北，今天開始正式進入北部慢旅。</p><div class="chips"><span class="chip">那霸→BANTA 約1～1.5小時</span></div></div></div>
+    </div>
+    <div class="grid" style="margin-top:16px">
+      <article class="card">
+        <img src="https://pimg.1px.tw/linrosely/1697793459-2986372783-g.jpg" alt="BANTA CAFE 海景">
+        <div class="card-body">
+          <h3>☕ BANTA CAFE by Hoshino Resorts</h3>
+          <div class="meta">
+            <div><strong>時間</strong>09:45～11:00</div>
+            <div><strong>地址</strong>〒904-0327 沖縄県中頭郡読谷村儀間560</div>
+            <div><strong>停留</strong>約1小時15分</div>
+            <div><strong>車程</strong>那霸市區約1～1.5小時</div>
+            <div><strong>備註</strong>清水模、海景露台、咖啡。BANTA CAFE本身不需預約；若要吃OLU Grill則可預約。</div>
+          </div>
+          <div class="links">
+            <a href="https://www.google.com/maps/search/?api=1&query=BANTA+CAFE+Okinawa" target="_blank">Google Maps</a>
+            <a href="https://banta-cafe.com/zh-tw/" target="_blank">官方網站</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://transviet.com.vn/Media/Uploads/bai-viet-2025/kinh-nghiem-du-lich-okinawa/kinh-nghiem-du-lich-okinawa-6.jpg" alt="萬座毛">
+        <div class="card-body">
+          <h3>🪨 萬座毛</h3>
+          <div class="meta">
+            <div><strong>時間</strong>11:30～12:15</div>
+            <div><strong>地址</strong>〒904-0411 沖縄県国頭郡恩納村恩納</div>
+            <div><strong>停留</strong>約45分鐘</div>
+            <div><strong>車程</strong>BANTA→萬座毛約25～35分鐘</div>
+            <div><strong>備註</strong>重點拍象鼻岩與西海岸；如果天氣差或想更悠閒，可直接前往古宇利島。</div>
+          </div>
+          <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=万座毛沖縄" target="_blank">Google Maps</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://okinawa-travelguide.com/wp-content/uploads/2025/08/26654991_m-1280x855.jpg" alt="古宇利大橋">
+        <div class="card-body">
+          <h3>💙 古宇利大橋＋古宇利島</h3>
+          <div class="meta">
+            <div><strong>時間</strong>14:00～15:45</div>
+            <div><strong>地址</strong>沖縄県国頭郡今帰仁村古宇利</div>
+            <div><strong>停留</strong>約1小時45分</div>
+            <div><strong>車程</strong>萬座毛→古宇利島約1小時10分～1小時30分</div>
+            <div><strong>備註</strong>今天海景主角；安排午餐、古宇利大橋、沙灘及島上咖啡。</div>
+          </div>
+          <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=古宇利大橋沖縄" target="_blank">Google Maps</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://res.cloudinary.com/tabikobo/images/f_auto%2Cq_auto/v1689924728/wordpress_tabi-pocket/5ba4add5393c717b2a3b5ad70df1b56e/5ba4add5393c717b2a3b5ad70df1b56e.jpg?_i=AA" alt="備瀨福木林道">
+        <div class="card-body">
+          <h3>🌿 備瀨福木林道</h3>
+          <div class="meta">
+            <div><strong>時間</strong>16:15～17:45</div>
+            <div><strong>地址</strong>〒905-0207 沖縄県国頭郡本部町備瀬389</div>
+            <div><strong>停留</strong>約1.5小時</div>
+            <div><strong>車程</strong>古宇利島→備瀨約35～45分鐘</div>
+            <div><strong>備註</strong>牽手、背影、綠色隧道；不用走完全程，可視體力折返。</div>
+          </div>
+          <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=備瀬のフクギ並木" target="_blank">Google Maps</a></div>
+        </div>
+      </article>
+    </div>
+    <div class="route"><h3>🏨 今晚住本部町</h3><p>建議挑「海景＋陽台＋停車方便」的Villa／精品民宿，10/27與10/28連住兩晚，省去每天整理行李的時間。</p></div>
+  </section>
+
+  <section id="d3" class="section">
+    <div class="section-title"><span class="day">DAY 3</span><h2>10/28（三）｜北部深度慢遊</h2></div>
+    <p class="subtitle">主方案：美麗海水族館＋海洋博公園＋今歸仁城跡｜備選：JUNGLIA＋SPA</p>
+
+    <div class="callout">
+      <h3>⭐ 我更推薦的 Day 3</h3>
+      <div>如果你們這趟旅行的重點是「情侶、美拍、海景、不要太趕」，我會把美麗海水族館＋海洋博公園＋今歸仁城跡當主方案；JUNGLIA保留成想玩刺激設施時的備案。</div>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <img src="https://www.japan.travel/tw/spot/581/" alt="沖繩美麗海水族館">
+        <div class="card-body">
+          <h3>🐋 沖繩美麗海水族館</h3>
+          <div class="meta">
+            <div><strong>時間</strong>09:00～11:30</div>
+            <div><strong>地址</strong>〒905-0206 沖縄県国頭郡本部町石川424</div>
+            <div><strong>停留</strong>約2.5小時</div>
+            <div><strong>車程</strong>本部住宿區約10～20分鐘</div>
+            <div><strong>備註</strong>重點看「黑潮之海」；可依當日活動時間安排餵食或海豚相關展示。</div>
+          </div>
+          <div class="links">
+            <a href="https://www.google.com/maps/search/?api=1&query=沖縄美ら海水族館" target="_blank">Google Maps</a>
+            <a href="https://churaumi.okinawa/tc/" target="_blank">官方網站</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://tc.tabirai.net/sightseeing/article/img/0001580/kiji1Img.jpg" alt="今歸仁城跡">
+        <div class="card-body">
+          <h3>🏯 今歸仁城跡</h3>
+          <div class="meta">
+            <div><strong>時間</strong>13:30～15:00</div>
+            <div><strong>地址</strong>〒905-0428 沖縄県国頭郡今帰仁村今泊5101</div>
+            <div><strong>停留</strong>約1.5小時</div>
+            <div><strong>車程</strong>海洋博公園→今歸仁約15～20分鐘</div>
+            <div><strong>備註</strong>石牆、綠地與遠海景觀；比單純再跑一個海灘更能讓旅程增加文化層次。</div>
+          </div>
+          <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=今帰仁城跡" target="_blank">Google Maps</a></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="route">
+      <h3>☕ 15:30～17:00｜今歸仁／名護特色咖啡廳</h3>
+      <p>這一段刻意不指定單一店家，讓你們可以依當天天氣、體力與海況決定；如果已經走很多路，直接回飯店休息更好。</p>
+    </div>
+
+    <div class="callout">
+      <h3>🌴 如果你們想玩 JUNGLIA</h3>
+      <p><strong>09:00～17:00</strong>：JUNGLIA；晚上可視當日營業時間銜接SPA JUNGLIA。園區營業時間及部分設施可能隨日期、人潮與日落調整，出發前務必查看官方日曆。</p>
+      <div class="links">
+        <a href="https://www.google.com/maps/search/?api=1&query=JUNGLIA+OKINAWA" target="_blank">Google Maps</a>
+        <a href="https://junglia.jp/tc/" target="_blank">JUNGLIA 官方網站</a>
+        <a href="https://junglia.jp/tc/opening-hours?section=shows" target="_blank">官方營業時間</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="d4" class="section">
+    <div class="section-title"><span class="day">DAY 4</span><h2>10/29（四）｜北部慢旅＋浪漫夕陽</h2></div>
+    <p class="subtitle">名護 → 恩納海岸 → 美國村 → Sunset Beach → 回那霸</p>
+
+    <div class="timeline">
+      <div class="stop"><div class="time">08:00</div><div><h3>早餐、退房</h3><p>今天不要太早趕路，讓前幾天累積的體力恢復。</p></div></div>
+      <div class="stop"><div class="time">09:00</div><div><h3>今歸仁城跡（若 Day 3 未安排）</h3><p>若前一天已完成，今天直接略過，換成今歸仁海岸／咖啡廳。</p></div></div>
+    </div>
+
+    <div class="grid" style="margin-top:16px">
+      <article class="card">
+        <img src="https://tc.tabirai.net/sightseeing/article/img/0001580/kiji1Img.jpg" alt="今歸仁城跡">
+        <div class="card-body">
+          <h3>🏯 今歸仁城跡（彈性景點）</h3>
+          <div class="meta">
+            <div><strong>時間</strong>09:00～10:30</div>
+            <div><strong>地址</strong>〒905-0428 沖縄県国頭郡今帰仁村今泊5101</div>
+            <div><strong>停留</strong>約1～1.5小時</div>
+            <div><strong>車程</strong>本部住宿區約20～30分鐘</div>
+            <div><strong>備註</strong>Day 3若已去過，此卡直接刪除，不要重複。</div>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://transviet.com.vn/Media/Uploads/bai-viet-2025/kinh-nghiem-du-lich-okinawa/kinh-nghiem-du-lich-okinawa-6.jpg" alt="恩納海岸">
+        <div class="card-body">
+          <h3>🌊 恩納海岸慢遊</h3>
+          <div class="meta">
+            <div><strong>時間</strong>13:30～16:30</div>
+            <div><strong>地址</strong>沖縄県國頭郡恩納村西海岸一帶</div>
+            <div><strong>停留</strong>約2～3小時，依當日選1～2個停車方便的海景點</div>
+            <div><strong>車程</strong>名護→恩納約45～60分鐘</div>
+            <div><strong>備註</strong>這段是「留白時間」：喝咖啡、看海、拍照，不追求景點數量。</div>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_137853/20230109065844_wl1YY/jpg" alt="美國村">
+        <div class="card-body">
+          <h3>🎡 美國村</h3>
+          <div class="meta">
+            <div><strong>時間</strong>17:00～18:15</div>
+            <div><strong>地址</strong>〒904-0115 沖縄県中頭郡北谷町美浜</div>
+            <div><strong>停留</strong>約1小時15分</div>
+            <div><strong>車程</strong>恩納→美國村約40～50分鐘</div>
+            <div><strong>備註</strong>先拍彩色街區，再慢慢往海邊移動，等待夕陽。</div>
+          </div>
+          <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=美浜アメリカンビレッジ" target="_blank">Google Maps</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://media-assets.aumo.jp/uploads/photo/upload_photo/data/499568/large_webp_a08e3f47-2eff-4f69-bc25-e44f7a750269.webp" alt="Sunset Beach">
+        <div class="card-body">
+          <h3>🌅 Sunset Beach</h3>
+          <div class="meta">
+            <div><strong>時間</strong>18:15～19:00</div>
+            <div><strong>地址</strong>〒904-0115 沖縄県中頭郡北谷町美浜2</div>
+            <div><strong>停留</strong>約45分鐘</div>
+            <div><strong>車程</strong>美國村內步行／短程移動</div>
+            <div><strong>備註</strong>夕陽時間依當天天候而變化；海邊以安全與現場公告為準。</div>
+          </div>
+          <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=Sunset+Beach+Chatan+Okinawa" target="_blank">Google Maps</a></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="route">
+      <h3>🍽️ 19:00～20:00｜北谷晚餐</h3>
+      <p>可在美國村解決晚餐，不建議再特別繞去其他地區；20:00左右離開北谷，返回那霸。</p>
+    </div>
+    <div class="route">
+      <h3>🏨 21:00左右｜那霸入住</h3>
+      <p>最後一晚建議住旭橋／縣廳前，方便隔天一早前往那霸機場。</p>
+    </div>
+  </section>
+
+  <section id="d5" class="section">
+    <div class="section-title"><span class="day">DAY 5</span><h2>10/30（五）｜早班機返台</h2></div>
+    <p class="subtitle">那霸 → 那霸機場 → 桃園</p>
+    <div class="timeline">
+      <div class="stop"><div class="time">03:50</div><div><h3>起床、最後整理</h3><p>前一晚先把護照、手機、充電器、伴手禮及登機資料整理好。</p></div></div>
+      <div class="stop"><div class="time">04:40</div><div><h3>飯店出發</h3><p>建議前一晚請飯店櫃檯協助預約計程車；實際出發時間依住宿位置及當日交通調整。</p></div></div>
+      <div class="stop"><div class="time">05:10</div><div><h3>抵達那霸機場</h3><p>辦理報到、行李托運、安檢及出境。</p><div class="chips"><span class="chip">建議至少預留約3小時</span></div></div></div>
+      <div class="stop"><div class="time">08:35</div><div><h3>NU301｜那霸 → 桃園</h3><p>官方2026/10/25～2027/3/27冬季班表：08:35起飛、09:15抵達桃園。</p><div class="links"><a href="https://www.jal.co.jp/tw/ja/offers/okinawa-jta/" target="_blank">JTA/JAL官方航班資訊</a></div></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title"><h2>🏨 住宿配置</h2></div>
+    <div class="hotel">
+      <div class="box"><h3>10/26｜那霸</h3><p>縣廳前／旭橋。重點：停車、晚餐方便、晚上休息。</p></div>
+      <div class="box"><h3>10/27～10/28｜本部</h3><p>海景Villa／精品民宿。重點：陽台、停車、連住兩晚。</p></div>
+      <div class="box"><h3>10/29｜那霸</h3><p>旭橋／縣廳前。重點：清晨方便叫車去機場。</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title"><h2>📸 情侶必拍清單</h2></div>
+    <div class="grid">
+      <article class="card"><img src="https://www.companion-enkai.com/blog/wp-content/uploads/2018/04/umikajiterrace.jpg" alt="瀨長島"><div class="card-body"><h3>① 瀨長島</h3><p>白色建築＋藍海＋飛機。</p></div></article>
+      <article class="card"><img src="https://okinawa-travelguide.com/wp-content/uploads/2025/08/26654991_m-1280x855.jpg" alt="古宇利大橋"><div class="card-body"><h3>② 古宇利大橋</h3><p>海天同框、牽手背影。</p></div></article>
+      <article class="card"><img src="https://res.cloudinary.com/tabikobo/images/f_auto%2Cq_auto/v1689924728/wordpress_tabi-pocket/5ba4add5393c717b2a3b5ad70df1b56e/5ba4add5393c717b2a3b5ad70df1b56e.jpg?_i=AA" alt="備瀨福木林道"><div class="card-body"><h3>③ 備瀨福木林道</h3><p>牽手＋森林隧道。</p></div></article>
+      <article class="card"><img src="https://media-assets.aumo.jp/uploads/photo/upload_photo/data/499568/large_webp_a08e3f47-2eff-4f69-bc25-e44f7a750269.webp" alt="Sunset Beach"><div class="card-body"><h3>④ 美國村夕陽</h3><p>Sunset Beach剪影＋夜景。</p></div></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="callout">
+      <h3>🚗 自駕小提醒</h3>
+      <ul>
+        <li>10/26取車後直接進行瀨長島行程；第一天若租車延誤，優先刪減波之上海灘停留。</li>
+        <li>10/27開始一路往北，10/27～10/28住本部，減少搬行李。</li>
+        <li>Day 3若選JUNGLIA，請出發前再次確認官方營業日曆、設施與SPA時間。</li>
+        <li>10月底天氣仍可能受熱帶系統、雨勢或海風影響；海景行程請保留彈性。</li>
+        <li>古宇利島、備瀨、恩納海岸都不必「每個點都走完」，這趟旅行的核心是舒服。</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p><strong>資料與連結說明：</strong>航班時間以JTA/JAL公開的2026冬季班表為基準；景點地址及營業資訊請於出發前再次確認。照片為公開網路圖片示意，實際使用於公開網站時，請確認各圖片的授權條件。</p>
+    <p>本頁為個人旅行規劃範本，不構成航班、營業時間或預約之保證。</p>
+  </footer>
+</main>
+</body>
+</html>
